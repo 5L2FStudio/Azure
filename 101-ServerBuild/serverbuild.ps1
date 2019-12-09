@@ -5,8 +5,8 @@
 ######################################33
 
 #variables
-$regionalsettingsURL = "https://raw.githubusercontent.com/averkinderen/Azure/master/101-ServerBuild/AURegion.xml"
-$RegionalSettings = "D:\AURegion.xml"
+$regionalsettingsURL = "https://raw.githubusercontent.com/5L2FStudio/Azure/master/101-ServerBuild/TWRegion.xml"
+$RegionalSettings = "D:\TWRegion.xml"
 
 
 #downdload regional settings file
@@ -18,11 +18,11 @@ $webclient.DownloadFile($regionalsettingsURL,$RegionalSettings)
 & $env:SystemRoot\System32\control.exe "intl.cpl,,/f:`"$RegionalSettings`""
 
 # Set languages/culture. Not needed perse.
-Set-WinSystemLocale en-AU
-Set-WinUserLanguageList -LanguageList en-AU -Force
-Set-Culture -CultureInfo en-AU
+Set-WinSystemLocale zh-TW
+Set-WinUserLanguageList -LanguageList zh-TW -Force
+Set-Culture -CultureInfo zh-TW
 Set-WinHomeLocation -GeoId 12
-Set-TimeZone -Name "E. Australia Standard Time"
+Set-TimeZone -Name "Taipei Standard Time"
 
 # restart virtual machine to apply regional settings to current user. You could also do a logoff and login.
 Start-sleep -Seconds 40
