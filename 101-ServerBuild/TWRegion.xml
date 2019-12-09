@@ -1,1 +1,25 @@
-
+<gs:GlobalizationServices xmlns:gs="urn:longhornGlobalizationUnattend"> 
+<!--User List-->
+<gs:UserList>
+    <gs:User UserID="Current" CopySettingsToDefaultUserAcct="true" CopySettingsToSystemAcct="true"/> 
+</gs:UserList>
+<!-- user locale -->
+<gs:UserLocale> 
+    <gs:Locale Name="zh-TW" SetAsCurrent="true"/> 
+</gs:UserLocale>
+<!-- system locale -->
+<gs:SystemLocale Name="zh-TW"/>
+<!-- GeoID -->
+<gs:LocationPreferences> 
+    <gs:GeoID Value="237"/> 
+</gs:LocationPreferences>
+<gs:MUILanguagePreferences>
+	<gs:MUILanguage Value="zh-TW"/>
+	<gs:MUIFallback Value="en-US"/>
+</gs:MUILanguagePreferences>
+<!-- input preferences -->
+<gs:InputPreferences>
+    <!--zh-TW-->
+    <gs:InputLanguageID Action="add" ID="0404:{B115690A-EA02-48D5-A231-E3578D2FDF80}{B2F9C502-1742-11D4-9790-0080C882687E}" Default="true"/> 
+</gs:InputPreferences>
+</gs:GlobalizationServices>
