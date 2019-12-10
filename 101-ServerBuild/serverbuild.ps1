@@ -31,6 +31,9 @@ Set-TimeZone -Name "Taipei Standard Time"
 # Install Language Pack
 Dism /online /Add-Package /PackagePath:$LanguagePack
 
+
+# cscript c:\windows\system32\slmgr.vbs /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
+
 # restart virtual machine to apply regional settings to current user. You could also do a logoff and login.
 Start-sleep -Seconds 40
 Restart-Computer
