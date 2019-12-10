@@ -27,6 +27,7 @@ Set-WinUserLanguageList -LanguageList zh-TW -Force
 Set-Culture -CultureInfo zh-TW
 Set-WinHomeLocation -GeoId 12
 Set-TimeZone -Name "Taipei Standard Time"
+Set-WinUILanguageOverride -Language zh-TW
 
 # Install Language Pack
 Dism /online /Add-Package /PackagePath:$LanguagePack
