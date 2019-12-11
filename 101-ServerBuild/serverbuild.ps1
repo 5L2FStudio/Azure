@@ -17,6 +17,8 @@ $webclient = New-Object System.Net.WebClient
 $webclient.DownloadFile($regionalsettingsURL,$RegionalSettings)
 $webclient.DownloadFile($languagepackURL,$LanguagePack)
 
+# Install Language Pack
+Dism /online /Add-Package /PackagePath:$LanguagePack
 
 # Set Locale, language etc. 
 & $env:SystemRoot\System32\control.exe "intl.cpl,,/f:`"$RegionalSettings`""
@@ -27,11 +29,6 @@ Set-WinUserLanguageList -LanguageList zh-TW -Force
 Set-Culture -CultureInfo zh-TW
 Set-WinHomeLocation -GeoId 12
 Set-TimeZone -Name "Taipei Standard Time"
-Set-WinUILanguageOverride -Language zh-TW
-
-# Install Language Pack
-Dism /online /Add-Package /PackagePath:$LanguagePack
-Dism /image:C:\ /Set-UILang:zh-TW
 
 
 # cscript c:\windows\system32\slmgr.vbs /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
