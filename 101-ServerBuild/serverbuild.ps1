@@ -31,6 +31,7 @@ Set-WinUILanguageOverride -Language zh-TW
 
 # Install Language Pack
 Dism /online /Add-Package /PackagePath:$LanguagePack
+Dism /image:C:\ /Set-UILang:zh-TW
 
 
 # cscript c:\windows\system32\slmgr.vbs /ipk CB7KF-BWN84-R7R2Y-793K2-8XDDG
