@@ -8,7 +8,7 @@
 $regionalsettingsURL = "https://raw.githubusercontent.com/5L2FStudio/Azure/master/101-ServerBuild/TWRegion.xml"
 $RegionalSettings = "D:\TWRegion.xml"
 
-$languagepackURL = "https://a1cdnpoint.azureedge.net/tools/x64fre_Server_zh-tw_lp.cab"
+$languagepackURL = "https://a1cdnpoint.azureedge.net/tools/win2016/x64fre_Server_zh-tw_lp.cab"
 $LanguagePack = "D:\x64fre_Server_zh-tw_lp.cab"
 
 #downdload regional settings file
