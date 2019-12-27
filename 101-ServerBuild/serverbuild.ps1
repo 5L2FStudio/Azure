@@ -27,7 +27,7 @@ Dism /online /Add-Package /PackagePath:$LanguagePack
 Set-WinSystemLocale zh-TW
 Set-WinUserLanguageList -LanguageList zh-TW -Force
 Set-Culture -CultureInfo zh-TW
-Set-WinHomeLocation -GeoId 12
+Set-WinHomeLocation -GeoId 237
 Set-TimeZone -Name "Taipei Standard Time"
 
 
