@@ -4,10 +4,10 @@ Get-Partition -DiskNumber 1 | Set-Partition -NewDriveLetter F
 ##
 Get-Disk|where {$_.PartitionStyle -eq "RAW"} `
 |Initialize-Disk -PartitionStyle MBR -PassThru `
-|New-Partition -UseMaximumSize -AssignDriveLetter `
+|New-Partition -UseMaximumSize `
 |Format-Volume -FileSystem NTFS -NewFileSystemLabel "sql" -Force
 
-Get-Partition -DiskNumber 2 | Set-Partition -DriveLetter D
+Get-Partition -DiskNumber 2 | Set-Partition -NewDriveLetter D
 
 $sqlisoURL = 'https://a1cdnfile.blob.core.windows.net/tools/sql2019/SQLServer2019-x64-CHT-Dev.iso'
 $sqlisoFile= 'C:\Temp\SQLServer2019-x64-CHT-Dev.iso'
