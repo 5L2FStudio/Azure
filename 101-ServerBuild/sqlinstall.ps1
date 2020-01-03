@@ -25,6 +25,7 @@ $webclient.DownloadFile($sqliniURL,$sqliniFile)
 $webclient.DownloadFile($ssmsURL  ,$ssmsFile)
 
 Mount-DiskImage -ImagePath $sqlisoFile
+$isodrive = ( Get-DiskImage -ImagePath 'C:\Temp\SQLServer2019-x64-CHT-Dev.iso' | Get-Volume ).DriveLetter
 
-Start-Process -FilePath 'Setup.exe'  -WorkingDirectory 'G:\' -Wait -ArgumentList "/ConfigurationFile=$sqliniFile"
+Start-Process -FilePath 'Setup.exe'  -WorkingDirectory $isodrive':\' -Wait -ArgumentList "/ConfigurationFile=$sqliniFile"
 Start-Process -FilePath 'SSMS-Setup-CHT.exe'  -WorkingDirectory 'C:\Temp' -Wait -ArgumentList "/install /quiet /passive /norestart"
