@@ -15,7 +15,8 @@ $sqlisoFile= 'C:\Temp\SQLServer2019-x64-CHT-Dev.iso'
 $sqliniURL = 'https://a1cdnfile.blob.core.windows.net/tools/sql2019/ConfigurationFile.ini'
 $sqliniFile= 'C:\Temp\ConfigurationFile.ini'
 
-$ssmsURL = 'https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404'
+## SSMS 
+$ssmsURL = 'https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404'
 $ssmsFile= 'C:\Temp\SSMS-Setup-CHT.exe'
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12
